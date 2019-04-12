@@ -1,0 +1,25 @@
+---
+title: "TP2DataViz"
+author: "Vico le dozo"
+date: "12/04/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+```
+### Importation des librairies
+
+```{r import}
+library(ggplot2)
+library(dplyr)
+
+library(gapminder)
+library(hrbrthemes)
+
+gapminder %>%
+  filter(year=="1952") %>%
+  filter(gdpPercap<90000)%>%
+  ggplot( aes(x=gdpPercap, y = lifeExp, color=continent, size=pop)) + geom_point()
+
+```
