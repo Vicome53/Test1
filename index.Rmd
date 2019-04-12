@@ -22,4 +22,6 @@ gapminder %>%
   filter(gdpPercap<90000)%>%
   ggplot( aes(x=gdpPercap, y = lifeExp, color=continent, size=pop)) + geom_point()
 
+plot(1,1)
+
 ```
